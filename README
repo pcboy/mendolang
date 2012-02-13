@@ -1,0 +1,20 @@
+Basic usage:
+
+pcboy@home % ./langokusai.rb config/locales/*.yml 
+finding_people_really not found in en
+betalist_invit not found in fr
+comment_posted not found in fr
+not_yet_registered not found in fr
+myndpage not found in jp
+register_box_message not found in fr
+finding_people_really not found in fr
+betalist_invit not found in ge
+comment_posted not found in ge
+confirm_tag not found in ge
+i_remember_my_pass not found in ge
+just_mynd_it not found in ge
+lets_do_that not found in ge
+not_yet_registered not found in ge
+register_box_message not found in ge
+to_mynd not found in ge
+to_mynd_def not found in ge
