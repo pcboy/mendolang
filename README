@@ -1,6 +1,6 @@
 Basic usage:
 
-pcboy@home % ./langokusai.rb config/locales/*.yml 
+pcboy@home % ./mendolang.rb config/locales/*.yml 
 finding_people_really not found in en
 betalist_invit not found in fr
 comment_posted not found in fr
