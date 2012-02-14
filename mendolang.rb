@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'yaml'
 require 'smart_colored/extend'
 
