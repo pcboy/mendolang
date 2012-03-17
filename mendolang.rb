@@ -2,6 +2,9 @@
 require 'yaml'
 require 'smart_colored/extend'
 
+no_colors = ARGV[0] == '--no-colors'
+ARGV.shift if no_colors
+
 class Array
   def ^(other)
     result = dup
@@ -28,12 +31,13 @@ end
 missing = []
 prev = []
 trads.map{|k,v| v.to_a.uniq.map{|x| x.strip}.sort}.each do |x|
-  missing += x ^ prev if !prev.empty?
+  missing += (x ^ prev) if !prev.empty?
   prev = x
 end
 
 langs.each do |x|
   missing.each do |y|
-    puts "#{y.red.bold} not found in #{x.red.bold}" if !trads[x].include? y
+    no_colors ?  (key, lang = y, x) : (key,lang = y.red.bold, x.red.bold)
+    puts "#{key} not found in #{lang}" if !trads[x].include? y
   end
 end
