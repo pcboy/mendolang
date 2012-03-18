@@ -35,9 +35,11 @@ trads.map{|k,v| v.to_a.uniq.map{|x| x.strip}.sort}.each do |x|
   prev = x
 end
 
+output = []
 langs.each do |x|
   missing.each do |y|
     no_colors ?  (key, lang = y, x) : (key,lang = y.red.bold, x.red.bold)
-    puts "#{key} not found in #{lang}" if !trads[x].include? y
+    output << "#{key} not found in #{lang}" if !trads[x].include? y
   end
 end
+puts output.uniq!.sort
