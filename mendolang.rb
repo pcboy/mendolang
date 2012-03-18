@@ -30,7 +30,7 @@ end
 
 missing = []
 prev = []
-trads.map{|k,v| v.to_a.uniq.map{|x| x.strip}.sort}.each do |x|
+trads.map{|k,v| v.to_a.map{|x| x.strip}.sort}.each do |x|
   missing += (x ^ prev) if !prev.empty?
   prev = x
 end
