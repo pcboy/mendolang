@@ -64,4 +64,4 @@ langs.each do |x|
     output << "#{key} not found in #{lang}" if !trads[x].include? y
   end
 end
-puts output.uniq!.sort
+puts output.uniq.sort
